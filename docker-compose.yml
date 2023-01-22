@@ -1,0 +1,17 @@
+version: '3.8'
+
+networks:
+  default:
+    name: domino
+
+volumes:
+  data:
+    driver: local
+  config:
+    driver: local
+
+services:
+  domino_application:
+    image: domino_application
+    container_name: domino_application
+    restart: on-failure
